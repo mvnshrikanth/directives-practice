@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1">
+            <button class="btn btn-primary" (click)="buttonClicked()">Display Details</button>
+        </div>
+        <div class="col-11">
+            <p *ngIf="detailsToggle">Seceret Password = Tuna</p>
+        </div>
+    </div>
+    <div class="row" *ngFor="let details of toggleDetails; let i=index"
+        [ngStyle]="{backgroundColor: i>=5?'blue':'trasnparent'}" [ngClass]="{fivth: i>=5}">
+        {{details}}
+    </div>
+</div>
